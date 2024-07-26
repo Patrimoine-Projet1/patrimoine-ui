@@ -15,6 +15,7 @@
     "test:unit": "cypress run --component"
   },
   "dependencies": {
+    "@harena-com/typescript-client": "^1.0.0",
     "axios": "^1.7.2",
     "react": "^18.3.1",
     "react-admin": "^5.0.4",
