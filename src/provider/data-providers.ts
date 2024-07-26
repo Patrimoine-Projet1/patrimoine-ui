@@ -3,8 +3,6 @@ import { HarenaProviders } from "./types";
 
 export const getProvider = (resource: string): HarenaProviders<any> => {
   switch (resource) {
-    case "patrimoine":
-
     default:
       throw new Error("Unknown resource type");
   }
