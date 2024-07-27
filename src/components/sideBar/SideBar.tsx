@@ -1,3 +1,4 @@
+import { useRedirect } from "react-admin";
 import { Box, Typography, MenuItem } from "@mui/material";
 
 import logo from "@/assets/logo.png";
@@ -13,6 +14,7 @@ const MenuItemLink = ({
   label: string;
   path: string;
 }) => {
+  const redirect = useRedirect();
   return (
     <MenuItem
       sx={{
@@ -24,6 +26,9 @@ const MenuItemLink = ({
         margin: "0.8rem",
         borderRadius: "0.2rem",
         padding: "0.5rem 1rem",
+      }}
+      onClick={() => {
+        redirect("list", label);
       }}
     >
       <Icon style={{ fontSize: "1.5rem" }} />
@@ -75,9 +80,21 @@ export default function SideBar() {
         </Box>
       </Box>
       <Box>
-        <MenuItemLink icon={FaLandmark} label="Patrimoines" path="/" />
-        <MenuItemLink icon={FaHandHoldingUsd} label="Possessions" path="/" />
-        <MenuItemLink icon={FaChartLine} label="Projections futures" path="/" />
+        <MenuItemLink
+          icon={FaLandmark}
+          label="Patrimoines"
+          path="/patrimoines"
+        />
+        <MenuItemLink
+          icon={FaHandHoldingUsd}
+          label="Possessions"
+          path="/possessions"
+        />
+        <MenuItemLink
+          icon={FaChartLine}
+          label="Projections futures"
+          path="/projections-futures"
+        />
       </Box>
     </Box>
   );
