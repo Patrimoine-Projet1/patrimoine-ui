@@ -1,13 +1,13 @@
 import { Box } from "@mui/material";
 import HaList from "../../components/Halist/HaList";
-import { EditButton, FunctionField, TextField, Toolbar } from "react-admin";
+import { CreateButton, FunctionField, TextField, Toolbar } from "react-admin";
 import { Money } from "../../utils/money";
 import { HaDateField } from "../../utils/date";
 
-export const ActionShow = () => {
+const ActionShow = () => {
   return (
     <Toolbar>
-      <EditButton />
+      <CreateButton />
     </Toolbar>
   );
 };
@@ -21,6 +21,7 @@ export default function patrimoineList() {
         datagridProps={{
           rowClick: "show",
         }}
+        actions={<ActionShow />}
       >
         <TextField source="nom" label="Nom" />
         <FunctionField

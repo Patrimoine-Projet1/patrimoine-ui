@@ -3,7 +3,7 @@ import { Box, Typography, MenuItem } from "@mui/material";
 
 import logo from "@/assets/logo.png";
 import { Link } from "react-admin";
-import { FaChartLine, FaHandHoldingUsd, FaLandmark } from "react-icons/fa";
+import { FaChartLine, FaLandmark } from "react-icons/fa";
 
 const MenuItemLink = ({
   icon: Icon,
@@ -82,17 +82,12 @@ export default function SideBar() {
       <Box>
         <MenuItemLink
           icon={FaLandmark}
-          label="Patrimoines"
           path="/patrimoines"
-        />
-        <MenuItemLink
-          icon={FaHandHoldingUsd}
-          label="Possessions"
-          path="/possessions"
+          label="patrimoines"
         />
         <MenuItemLink
           icon={FaChartLine}
-          label="Projections futures"
+          label="projections futures"
           path="/projections-futures"
         />
       </Box>

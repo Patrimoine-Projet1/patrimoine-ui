@@ -20,7 +20,7 @@ const ActionShow = () => {
   );
 };
 
-export default function patrimoineShow() {
+export default function PatrimoineShow() {
   const { id } = useParams();
   return (
     <Box>
