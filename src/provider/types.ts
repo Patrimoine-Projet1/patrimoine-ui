@@ -1,6 +1,5 @@
-export type ResourceIdentifier = { id: string };
 export type MUTATION_TYPE = "CREATE" | "UPDATE";
-export type HarenaProviders<T extends ResourceIdentifier> = {
+export type HarenaProviders<T> = {
   getOne: (id: string, meta: any) => Promise<T>;
   saveOrUpdate: (
     payload: T,

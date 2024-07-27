@@ -15,6 +15,7 @@ export default function HaLayout({ children }: LayoutProps) {
         left="20vw"
         minHeight="83vh"
         padding="0.8rem"
+        bgcolor="black"
       >
         {children}
       </Box>

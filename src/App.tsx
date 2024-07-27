@@ -1,14 +1,10 @@
-import { Admin, EditGuesser, Resource, ShowGuesser } from "react-admin";
+import { Admin, Resource } from "react-admin";
+import { dataProvider } from "./provider/data-providers";
 import HaLayout from "./layout/HaLayout";
-import "./App.css";
+import patrimoines from "./operation/patrimoine";
+
 export const App = () => (
-  <Admin layout={HaLayout}>
-    <Resource
-      name="posts"
-      list={<p> liste de Patrimoine</p>}
-      edit={EditGuesser}
-      show={ShowGuesser}
-    />
-    <Resource name="comments" list={<p> liste de Patrimoine</p>} />
+  <Admin dataProvider={dataProvider} layout={HaLayout}>
+    <Resource name="patrimoines" {...patrimoines} />
   </Admin>
 );
