@@ -1,11 +1,14 @@
 import { DataProvider } from "react-admin";
 import { HarenaProviders } from "./types";
 import { patrimoineProviders } from "./patrimoine-providers";
+import { possessionProvider } from "./possession-provider";
 
 export const getProvider = (resource: string): HarenaProviders<any> => {
   switch (resource) {
     case "patrimoines":
       return patrimoineProviders;
+    case "possessions":
+      return possessionProvider;
     default:
       throw new Error("Unknown resource type");
   }
